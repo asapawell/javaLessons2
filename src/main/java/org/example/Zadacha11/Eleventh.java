@@ -20,12 +20,12 @@ public class Eleventh {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите возраст к удалению:");
-        int age  = scanner.nextInt();
-        for (Iterator<Map.Entry<User, Integer>> it = users.entrySet().iterator(); it.hasNext();){
-                Map.Entry<User,Integer> entry = it.next();
-                if (entry.getValue().equals(age)) {
-                    it.remove();
-                }
+        int age = scanner.nextInt();
+        for (Iterator<Map.Entry<User, Integer>> it = users.entrySet().iterator(); it.hasNext(); ) {
+            Map.Entry<User, Integer> entry = it.next();
+            if (entry.getValue().equals(age)) {
+                it.remove();
+            }
         }
         for (Map.Entry<User, Integer> entry : users.entrySet()) {
             System.out.println(entry.getKey().getName() + ":" + entry.getValue());
