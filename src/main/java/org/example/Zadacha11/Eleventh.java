@@ -14,6 +14,7 @@ public class Eleventh {
         users.put(new User("Oleg"), 33);
         users.put(new User("Dima"), 22);
         users.put(new User("Anton"), 40);
+        users.put(new User("Max"), 28);
         for (Map.Entry<User, Integer> entry : users.entrySet()) {
             System.out.println(entry.getKey().getName() + ":" + entry.getValue());
         }
@@ -36,11 +37,7 @@ public class Eleventh {
 class User {
     private final String name;
 
-    User(String name) {
-        this.name = name;
-    }
+    User(String name) {this.name = name;}
 
-    public String getName() {
-        return name;
-    }
+    public String getName() {return name;}
 }
