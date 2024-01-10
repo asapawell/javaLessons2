@@ -15,10 +15,10 @@ public class Eleventh {
         users.put(new User("Dima"), 22);
         users.put(new User("Anton"), 40);
         users.put(new User("Max"), 28);
+        System.out.println("Карта до удаления:");
         for (Map.Entry<User, Integer> entry : users.entrySet()) {
             System.out.println(entry.getKey().getName() + ":" + entry.getValue());
         }
-
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите возраст к удалению:");
         int age = scanner.nextInt();
@@ -28,6 +28,7 @@ public class Eleventh {
                 it.remove();
             }
         }
+        System.out.println("Карта после удаления");
         for (Map.Entry<User, Integer> entry : users.entrySet()) {
             System.out.println(entry.getKey().getName() + ":" + entry.getValue());
         }
