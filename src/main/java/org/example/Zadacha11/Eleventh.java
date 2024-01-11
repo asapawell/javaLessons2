@@ -24,7 +24,7 @@ public class Eleventh {
         int age = scanner.nextInt();
         for (Iterator<Map.Entry<User, Integer>> it = users.entrySet().iterator(); it.hasNext(); ) {
             Map.Entry<User, Integer> entry = it.next();
-            if (entry.getValue().equals(age)) {
+            if (entry.getValue() == age) {
                 it.remove();
             }
         }
