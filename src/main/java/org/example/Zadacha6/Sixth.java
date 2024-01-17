@@ -9,7 +9,7 @@ import org.example.User.*;
 
 public class Sixth {
     public static void main(String[] args) {
-        //Optional - может быть, а может не быть
+
         List<User> users = new ArrayList<>();
         users.add(new User(new Name("Pavel"), new Age(27)));
         users.add(new User(new Name("Anton"), new Age(33)));
