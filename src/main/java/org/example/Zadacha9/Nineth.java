@@ -5,7 +5,6 @@ package org.example.Zadacha9;
 import org.example.User.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
 public class Nineth {
     public static void main(String[] args) {
@@ -20,9 +19,8 @@ public class Nineth {
         System.out.println("User list: \n" + users);
         System.out.println("Age raised by 2:");
         users.stream()
-                .flatMap(user -> Stream.of(
-                        String.format("User: %s, age X2 %d", user.getName().getName(), user.getAge().getAge() * 2))
-                )
+                .map(user -> new User(new Name(user.getName().getName()),new Age(user.getAge().getAge() * 2)))
+                .toList()
                 .forEach(System.out::println);
     }
 }
