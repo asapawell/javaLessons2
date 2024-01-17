@@ -26,7 +26,7 @@ public class Twelveth {
             sumAllNums += entry.getValue();
             count++;
         }
-        int avgAge = sumAllNums / count;
+        double avgAge = (double) sumAllNums / count;
 
         for (Iterator<Map.Entry<User, Integer>> it = users.entrySet().iterator(); it.hasNext(); ) {
             Map.Entry<User, Integer> entry = it.next();

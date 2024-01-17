@@ -1,7 +1,7 @@
-package org.example.Zadacha6;
+package org.example.User;
 
 public class Age {
-private int age;
+    private int age;
 
     public Age(int age) {
         this.age = age;
@@ -13,6 +13,6 @@ private int age;
 
     @Override
     public String toString() {
-        return "" + age;
+        return String.valueOf(age);
     }
 }

@@ -1,4 +1,4 @@
-package org.example.Zadacha6;
+package org.example.User;
 
 public class Name {
     private String name;
@@ -13,6 +13,6 @@ public class Name {
 
     @Override
     public String toString() {
-        return  name;
+        return name;
     }
 }
