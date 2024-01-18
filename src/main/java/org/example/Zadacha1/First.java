@@ -1,19 +1,27 @@
 package org.example.Zadacha1;
 
+import java.util.Arrays;
 import java.util.Random;
 //Создать массив из пяти элементов, содержащий целые числа и вывести на экран.
 
 public class First {
     public static void main(String[] args) {
-        int array[] = printArray(new int[5]);
+
+        printArray(new int[5]);
+        System.out.println();
+        //через toString
+        Random rnd = new Random();
+        int [] array =
+                {rnd.nextInt(25), rnd.nextInt(25),rnd.nextInt(25), rnd.nextInt(25),rnd.nextInt(25)};
+        System.out.println(Arrays.toString(array));
+
     }
 
-    public static int[] printArray(int[] array) {
+    public static void printArray(int[] array) {
         for (int i : array) {
             Random rnd = new Random();
             array[i] = rnd.nextInt(100);
             System.out.print(array[i] + " ");
         }
-        return array;
     }
 }

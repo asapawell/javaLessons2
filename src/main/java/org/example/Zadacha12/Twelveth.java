@@ -1,6 +1,6 @@
 package org.example.Zadacha12;
 //То же что в задаче №11, но удалить все записи с возрастом меньше среднего.
-
+import org.example.User.*;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -43,14 +43,3 @@ public class Twelveth {
 }
 
 
-class User {
-    private final String name;
-
-    User(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-}

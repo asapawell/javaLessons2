@@ -2,6 +2,8 @@ package org.example.Zadacha2;
 
 //Создать список из пяти элементов и вывести на экран. Добавить один элемент, удалить другой элемент и вывести на экран.
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 public class Second {
@@ -14,6 +16,11 @@ public class Second {
         System.out.println("Список после удаления 4го элемента:");
         nums3.remove(3);
         System.out.println(nums3.toString());
+        System.out.println();
+        //второй способ
+        List<Integer> listOfNums = new ArrayList<>();
+        Collections.addAll(listOfNums,3,32,33,21,5);
+        System.out.println(listOfNums);
     }
 
     public static ArrayList<Integer> printList(ArrayList<Integer> list) {

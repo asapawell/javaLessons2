@@ -1,6 +1,6 @@
 package org.example.Zadacha11;
 //В карте из задачи №10 удалить записи с определенным возрастом, который запрашивается с клавиатуры. Вывести измененную карту на экран.
-
+import org.example.User.*;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -35,10 +35,3 @@ public class Eleventh {
     }
 }
 
-class User {
-    private final String name;
-
-    User(String name) {this.name = name;}
-
-    public String getName() {return name;}
-}

@@ -12,16 +12,16 @@ import java.util.List;
 public class Seventh {
     public static void main(String[] args) {
         List<User> usersList = new ArrayList<>();
-        usersList.add(new User(new Name("Alex"), new Age(22)));
-        usersList.add(new User(new Name("Mark"), new Age(12)));
-        usersList.add(new User(new Name("Ashot"), new Age(14)));
-        usersList.add(new User(new Name("Nina"), new Age(33)));
-        usersList.add(new User(new Name("Tom"), new Age(30)));
-        usersList.add(new User(new Name("Jim"), new Age(31)));
+        usersList.add(new User("Alex", 22));
+        usersList.add(new User("Mark", 12));
+        usersList.add(new User("Ashot", 14));
+        usersList.add(new User("Nina", 33));
+        usersList.add(new User("Tom", 30));
+        usersList.add(new User("Jim", 31));
         System.out.println("User list:\n" + usersList);
 
         List<User> filteredUsers = usersList.stream()
-                .sorted(Comparator.comparing(user -> user.getAge().getAge()))
+                .sorted(Comparator.comparing(User::getAge))
                 .toList();
         System.out.println("Filtered user list by age: \n" + filteredUsers);
     }

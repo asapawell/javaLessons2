@@ -4,6 +4,7 @@ package org.example.Zadacha3;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import org.example.User.*;
 
 public class Third {
     public static void main(String[] args) {
@@ -25,32 +26,3 @@ public class Third {
     }
 }
 
-class User {
-    private String name;
-    private int age;
-
-    User(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    //вопрос как использовать сеттер при конструкторе
-    public void setAge(int age) {
-        if (age > 0 && age < 110) {
-            this.age = age;
-        } else
-            System.out.println("Введите число от 0 до 110!");
-    }
-}

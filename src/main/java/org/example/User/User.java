@@ -1,19 +1,22 @@
 package org.example.User;
 
 public class User {
-    private Name name;
-    private Age age;
+    private String name;
+    private int age;
 
-    public User(Name name, Age age) {
+    public User(String name, int age) {
         this.name = name;
         this.age = age;
     }
+    public User(String name){
+        this.name =name;
+    }
 
-    public Name getName() {
+    public String getName() {
         return name;
     }
 
-    public Age getAge() {
+    public int getAge() {
         return age;
     }
 

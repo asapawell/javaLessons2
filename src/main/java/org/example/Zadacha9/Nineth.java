@@ -9,17 +9,17 @@ import java.util.List;
 public class Nineth {
     public static void main(String[] args) {
         List<User> users = new ArrayList<>();
-        users.add(new User(new Name("Pavel"), new Age(27)));
-        users.add(new User(new Name("Anton"), new Age(33)));
-        users.add(new User(new Name("Dima"), new Age(12)));
-        users.add(new User(new Name("Anna"), new Age(25)));
-        users.add(new User(new Name("Michael"), new Age(35)));
-        users.add(new User(new Name("Stepa"), new Age(21)));
-        users.add(new User(new Name("Maria"), new Age(31)));
+        users.add(new User("Pavel", 27));
+        users.add(new User("Anton", 33));
+        users.add(new User("Dima", 12));
+        users.add(new User("Anna", 25));
+        users.add(new User("Michael", 35));
+        users.add(new User("Stepa", 21));
+        users.add(new User("Maria", 31));
         System.out.println("User list: \n" + users);
         System.out.println("Age raised by 2:");
         users.stream()
-                .map(user -> new User(new Name(user.getName().getName()),new Age(user.getAge().getAge() * 2)))
+                .map(user -> new User(user.getName(),user.getAge() * 2))
                 .toList()
                 .forEach(System.out::println);
     }
