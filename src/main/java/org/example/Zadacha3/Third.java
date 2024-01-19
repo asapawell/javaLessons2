@@ -20,9 +20,7 @@ public class Third {
             User user = new User(name, age);
             users.add(user);
         }
-        for (User u : users) {
-            System.out.println(u.getName() + " " + u.getAge());
-        }
+        System.out.println("User list:\n" + users);
     }
 }
 

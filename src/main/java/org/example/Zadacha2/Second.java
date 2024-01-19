@@ -8,12 +8,12 @@ import java.util.Random;
 
 public class Second {
     public static void main(String[] args) {
-        System.out.println("Изначальный список:");
+        System.out.println("User list:");
         ArrayList<Integer> nums3 = printList(new ArrayList<>());
-        System.out.println("Список после добавления элемента 777:");
+        System.out.println("List after adding 777:");
         nums3.add(777);
         System.out.println(nums3.toString());
-        System.out.println("Список после удаления 4го элемента:");
+        System.out.println("List after deleting fourth element:");
         nums3.remove(3);
         System.out.println(nums3.toString());
         System.out.println();

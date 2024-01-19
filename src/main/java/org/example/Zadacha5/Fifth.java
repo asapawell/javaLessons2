@@ -15,11 +15,7 @@ public class Fifth {
                 new User("MRyabov",55),
                 new User("GAmidi",32));
 
-        int count = 1;
-        for (User u : users) {
-            System.out.printf("Пользователь %d: %s, Возраст: %d\n", count, u.getName(), u.getAge());
-            count++;
-        }
+        System.out.println("User list:\n" + users);
         System.out.println();
         System.out.println("Обновленный список пользователей, чей возраст менее 40 лет:");
         //создаем новый список "К удалению". в него добавляем пользователей, чей возраст больше 40 лет
