@@ -7,12 +7,12 @@ public class Fourteenth {
     public static void main(String[] args) {
 
         Map<Integer, ArrayList<String>> humans = new HashMap<>();
-        humans.put(22, new ArrayList<String>(Arrays.asList("Pavel", "Dima", "Max")));
-        humans.put(23, new ArrayList<String>(Arrays.asList("Ramzan", "Habib", "Antony")));
-        humans.put(24, new ArrayList<String>(Arrays.asList("Ilya", "Mitya", "Anatoly")));
+        humans.put(22, new ArrayList<>(Arrays.asList("Pavel", "Dima", "Max")));
+        humans.put(23, new ArrayList<>(Arrays.asList("Ramzan", "Habib", "Antony")));
+        humans.put(24, new ArrayList<>(Arrays.asList("Ilya", "Mitya", "Anatoly")));
         int count = 1;
         for (Map.Entry<Integer, ArrayList<String>> i : humans.entrySet()) {
-            System.out.println(count + "." + "Возраст:" + i.getKey() + " У людей:" + i.getValue());
+            System.out.println(count + "." + "Age:" + i.getKey() + " people:" + i.getValue());
             count++;
         }
         //добавляем значение Andrey в первую запись и удалим значение Antony из второй записи
@@ -35,10 +35,10 @@ public class Fourteenth {
                 value.remove("Antony");
             }
         }
-        System.out.println("Список после добавления значения Andrey в первую запись:");
+        System.out.println("Map after adding Andrey in first key and deleting Antony in second key:");
         int count1 = 1;
         for (Map.Entry<Integer, ArrayList<String>> i : humans.entrySet()) {
-            System.out.println(count1 + "." + "Возраст:" + i.getKey() + " У людей:" + i.getValue());
+            System.out.println(count1 + "." + "Age:" + i.getKey() + " people:" + i.getValue());
             count1++;
         }
 
