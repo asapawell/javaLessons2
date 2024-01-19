@@ -2,7 +2,6 @@ package org.example.Zadacha12;
 //То же что в задаче №11, но удалить все записи с возрастом меньше среднего.
 import org.example.User.*;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 public class Twelveth {
@@ -27,13 +26,7 @@ public class Twelveth {
             count++;
         }
         double avgAge = (double) sumAllNums / count;
-
-        for (Iterator<Map.Entry<User, Integer>> it = users.entrySet().iterator(); it.hasNext(); ) {
-            Map.Entry<User, Integer> entry = it.next();
-            if (entry.getValue() < avgAge) {
-                it.remove();
-            }
-        }
+        users.entrySet().removeIf(entry -> entry.getValue() < avgAge);
         System.out.println("Карта после удаления записей с возрастом меньше среднего:");
         for (Map.Entry<User, Integer> entry : users.entrySet()) {
             System.out.println(entry.getKey().getName() + ":" + entry.getValue());
