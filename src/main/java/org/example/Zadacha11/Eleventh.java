@@ -1,8 +1,9 @@
 package org.example.Zadacha11;
 //В карте из задачи №10 удалить записи с определенным возрастом, который запрашивается с клавиатуры. Вывести измененную карту на экран.
+
 import org.example.User.*;
+
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -22,12 +23,7 @@ public class Eleventh {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите возраст к удалению:");
         int age = scanner.nextInt();
-        for (Iterator<Map.Entry<User, Integer>> it = users.entrySet().iterator(); it.hasNext(); ) {
-            Map.Entry<User, Integer> entry = it.next();
-            if (entry.getValue() == age) {
-                it.remove();
-            }
-        }
+        users.entrySet().removeIf(entry -> entry.getValue() == age);
         System.out.println("Карта после удаления");
         for (Map.Entry<User, Integer> entry : users.entrySet()) {
             System.out.println(entry.getKey().getName() + ":" + entry.getValue());

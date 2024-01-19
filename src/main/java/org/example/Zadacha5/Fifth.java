@@ -21,6 +21,7 @@ public class Fifth {
         //через лямбду
         users.removeIf(user -> user.getAge() < 40);
         System.out.println("User list, where users 're older 40:\n" + users);
+
     }
 }
 
