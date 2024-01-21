@@ -11,10 +11,14 @@ public class First {
         System.out.println();
         //через toString
         Random rnd = new Random();
-        int [] array =
-                {rnd.nextInt(25), rnd.nextInt(25),rnd.nextInt(25), rnd.nextInt(25),rnd.nextInt(25)};
+        int[] array =
+                {rnd.nextInt(25), rnd.nextInt(25), rnd.nextInt(25), rnd.nextInt(25), rnd.nextInt(25)};
         System.out.println(Arrays.toString(array));
-
+        //вариант через поток
+        var arr = rnd
+                .ints(5, 0, 100)
+                .toArray();
+        System.out.println(Arrays.toString(arr));
     }
 
     public static void printArray(int[] array) {
