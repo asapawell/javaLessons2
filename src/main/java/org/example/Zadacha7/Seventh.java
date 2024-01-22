@@ -10,7 +10,7 @@ import java.util.List;
 
 
 public class Seventh {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UserException {
         List<User> usersList = new ArrayList<>();
         usersList.add(new User("Alex", 22));
         usersList.add(new User("Mark", 12));

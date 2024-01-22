@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Nineth {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UserException {
         List<User> users = new ArrayList<>();
         users.add(new User("Pavel", 27));
         users.add(new User("Anton", 33));
@@ -19,7 +19,13 @@ public class Nineth {
         System.out.println("User list: \n" + users);
         System.out.println("Age raised by 2:");
         users.stream()
-                .map(user -> new User(user.getName(),user.getAge() * 2))
+                .map(user -> {
+                    try {
+                        return new User(user.getName(),user.getAge() * 2);
+                    } catch (UserException e) {
+                        throw new RuntimeException(e);
+                    }
+                })
                 .toList()
                 .forEach(System.out::println);
     }

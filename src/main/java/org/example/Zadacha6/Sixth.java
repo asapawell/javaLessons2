@@ -8,7 +8,7 @@ import java.util.List;
 import org.example.User.*;
 
 public class Sixth {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UserException {
 
         List<User> users = new ArrayList<>();
         users.add(new User("Pavel", 27));
