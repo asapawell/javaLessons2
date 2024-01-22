@@ -1,6 +1,5 @@
 package org.example.User;
 
-import java.util.Scanner;
 
 public class User {
     private String name;
