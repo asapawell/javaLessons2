@@ -20,18 +20,12 @@ public class Sixth {
         users.add(new User("Maria", 31));
         System.out.println("User list: \n" + users);
 
-        //Найдём средний возраст, создав поток с типом double
-        double avgAge = users.stream()
-                .mapToDouble(User::getAge)
-                .average()
-                .orElse(0);
-        System.out.printf("Average age of users is: %2f\n", avgAge);
-        //Найдем максимальный возраст, создав поток с типом int
-        int maxAge = users.stream()
+        //Найдём средний возраст и максимальный с помощью метода summaryStatistics()
+        var statistics = users.stream()
                 .mapToInt(User::getAge)
-                .summaryStatistics()
-                .getMax();
-        System.out.println("Maximum age is: " + maxAge);
+                .summaryStatistics();
+        System.out.printf("Average age of users is: %2f\n", statistics.getAverage());
+        System.out.printf("Maximum age is: %d\n", statistics.getMax());
     }
 }
 
