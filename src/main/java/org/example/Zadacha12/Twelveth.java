@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Twelveth {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UserException {
         Map<User, Integer> users = new HashMap<>();
         users.put(new User("Pavel"), 22);
         users.put(new User("Tom"), 29);
