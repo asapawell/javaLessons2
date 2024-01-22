@@ -1,15 +1,18 @@
 package org.example.User;
 
+import java.util.Scanner;
+
 public class User {
-    private final String name;
+    private String name;
     private int age;
 
-    public User(String name, int age) {
-        this.name = name;
+    public User(String name, int age) throws UserException {
+        setName(name);
         setAge(age);
     }
-    public User(String name){
-        this.name =name;
+
+    public User(String name) {
+        this.name = name;
     }
 
     public String getName() {
@@ -20,13 +23,21 @@ public class User {
         return age;
     }
 
-    public void setAge(int age) {
-        if (age > 1 && age < 110) {
+    public void setAge(int age) throws UserException {
+        if (age >= 1 && age < 110) {
             this.age = age;
+        } else {
+            throw new UserException("Invalid age. Age must be from 1 to 110 years");
+        }
+    }
+
+    public void setName(String name) throws UserException{
+        boolean result = name.matches("^[a-zA-Z]+$");
+        if (result){
+            this.name = name;
         }
         else {
-            System.out.println("Введите возраст от 1 до 110!");
-            System.exit(1);
+            throw new UserException("Invalid name.Name must be without digits and special characters");
         }
     }
 
