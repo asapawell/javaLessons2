@@ -10,7 +10,7 @@ public class User {
         setAge(age);
     }
 
-    public User(String name) {
+    public User(String name) throws UserException {
         this.name = name;
     }
 
