@@ -9,7 +9,7 @@ import java.util.Iterator;
 
 //Второй вариант удаления элемента с помощью Iterator
 public class Fifth_1 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UserException {
         ArrayList<User> users = new ArrayList<>();
         Collections.addAll(users,
                 new User("RBeda",39),

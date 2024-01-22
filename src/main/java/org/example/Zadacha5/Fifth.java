@@ -8,7 +8,7 @@ import java.util.Collections;
 //Создать список, из нескольких объектов User и вывести на экран.
 // Пройтись циклом forEach и удалить пользователей меньше определенного возраста. Вывести измененный список на экран.
 public class Fifth {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UserException {
         ArrayList<User> users = new ArrayList<>();
         Collections.addAll(users,
                 new User("RBeda", 39),
