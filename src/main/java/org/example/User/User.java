@@ -11,7 +11,7 @@ public class User {
     }
 
     public User(String name) throws UserException {
-        this.name = name;
+        setName(name);
     }
 
     public String getName() {
