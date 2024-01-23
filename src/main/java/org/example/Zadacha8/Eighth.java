@@ -18,10 +18,13 @@ public class Eighth {
         usersList.add(new User("Jim", 31));
         System.out.println("User list:\n" + usersList);
 
-        String[] array = usersList.stream()
-                //преобразуем к стрингу
-                .map(user -> "User: " + user.getName() + "," + " age " + user.getAge())
-                .toArray(String[]::new);
-        System.out.println("User array:\n" + Arrays.toString(array));
+//        String[] array = usersList.stream()
+//                //преобразуем к стрингу
+//                .map(user -> "User: " + user.getName() + "," + " age " + user.getAge())
+//                .toArray(String[]::new);
+//        System.out.println("User array:\n" + Arrays.toString(array));
+        var arrayOfUsers = usersList.toArray(User[]::new);
+        Arrays.stream(arrayOfUsers)
+                .forEach(System.out::println);
     }
 }
